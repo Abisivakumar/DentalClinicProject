@@ -34,7 +34,9 @@ function Appointment() {
     time: "",
   });
 
-  const doctors = ["Dr. Karthik", "Dr. Meena", "Dr. Arjun"];
+  const doctors = [ "Dr. Sarah Johnson", "Dr. Michael Lee", "Dr. Emily Carter","Dr. David Brown","Dr. Olivia White",
+    "Dr. James Wilson",
+  ];
 
   const services = ["Teeth Cleaning", "Root Canal", "Braces", "Dental Checkup"];
 
