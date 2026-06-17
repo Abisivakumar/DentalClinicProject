@@ -18,10 +18,10 @@ const doctors = [
       "Dr. Sarah Johnson",
 
     department:
-      "General Dentist",
+      "Lead Physiotherapist",
 
     description:
-      "Expert in dental checkups, teeth cleaning and healthy smile care."
+      "Expert in clinical assessment, posture alignment, and comprehensive custom recovery care."
   },
 
   {
@@ -32,10 +32,10 @@ const doctors = [
       "Dr. Michael Lee",
 
     department:
-      "Orthodontist",
+      "Sports Physical Therapist",
 
     description:
-      "Specialist in braces, teeth alignment and smile correction treatments."
+      "Specialist in athlete injury rehabilitation, joint agility training, and dynamic performance therapy."
   },
 
   {
@@ -46,10 +46,10 @@ const doctors = [
       "Dr. Emily Carter",
 
     department:
-      "Cosmetic Dentist",
+      "Orthopedic Rehab Specialist",
 
     description:
-      "Provides smile makeover and advanced cosmetic dental treatments."
+      "Provides clinical post-surgical rehabilitation and advanced joint mobility restoration protocols."
   },
 
   {
@@ -60,10 +60,10 @@ const doctors = [
       "Dr. David Brown",
 
     department:
-      "Endodontist",
+      "Neuro-Physiotherapist",
 
     description:
-      "Experienced in root canal and advanced tooth pain treatments."
+      "Experienced in stroke recovery, neuromuscular training, and motor function balance treatments."
   },
 
   {
@@ -74,10 +74,10 @@ const doctors = [
       "Dr. Olivia White",
 
     department:
-      "Pediatric Dentist",
+      "Pediatric Physiotherapist",
 
     description:
-      "Friendly dental care specialist for children and young patients."
+      "Friendly motor milestone improvement and physical development care specialist for children."
   },
 
   {
@@ -88,10 +88,10 @@ const doctors = [
       "Dr. James Wilson",
 
     department:
-      "Implant Specialist",
+      "Geriatric Rehab Expert",
 
     description:
-      "Specialized in dental implants and permanent tooth replacement."
+      "Specialized in age-related mobility restoration, arthritis management, and fall prevention training."
   },
 
   {
@@ -102,10 +102,10 @@ const doctors = [
       "Dr. Sophia Miller",
 
     department:
-      "Periodontist",
+      "Musculoskeletal Therapist",
 
     description:
-      "Expert in gum treatment and oral health maintenance procedures."
+      "Expert in chronic back pain management, sciatica relief, and advanced spine decompression."
   },
 
   {
@@ -116,24 +116,24 @@ const doctors = [
       "Dr. Ethan Clark",
 
     department:
-      "Oral Surgeon",
+      "Manual Therapy Practitioner",
 
     description:
-      "Performs advanced oral surgery and wisdom tooth removal safely."
+      "Performs deep tissue manipulation, myofascial release, and joint mobilization safety techniques."
   },
 
   {
     image:
-      "https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=900&q=80",
+      "public/pexels-kooldark-27666709.jpg",
 
     name:
       "Dr. Isabella King",
 
     department:
-      "Prosthodontist",
+      "Cardiopulmonary Therapist",
 
     description:
-      "Specialist in crowns, bridges and damaged teeth restoration."
+      "Specialist in breathing mechanics optimization, endurance training, and post-illness endurance."
   },
 
   {
@@ -144,39 +144,39 @@ const doctors = [
       "Dr. Noah Taylor",
 
     department:
-      "Emergency Dentist",
+      "Trauma Rehabilitation Specialist",
 
     description:
-      "Provides emergency dental care and immediate pain treatments."
+      "Provides post-accident physical therapy and immediate pain mitigation exercise sessions."
   },
 
   {
-  image:
-    "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=900&auto=format&fit=crop",
+    image:
+      "public/pexels-kooldark-29995617.jpg",
 
-  name:
-    "Dr. Daniel Harris",
+    name:
+      "Dr. Daniel Harris",
 
-  department:
-    "Dental Hygienist",
+    department:
+      "Kinesiology & Movement Expert",
 
-  description:
-    "Specialist in teeth cleaning, plaque removal and preventive dental care treatments."
-},
+    description:
+      "Specialist in dynamic muscle tracking, gait analysis, and proactive ergonomics guidance training."
+  },
 
-{
-  image:
-    "https://images.unsplash.com/photo-1598257006458-087169a1f08d?auto=format&fit=crop&w=900&q=80",
+  {
+    image:
+      "https://images.unsplash.com/photo-1598257006458-087169a1f08d?auto=format&fit=crop&w=900&q=80",
 
-  name:
-    "Dr. Amelia Scott",
+    name:
+      "Dr. Amelia Scott",
 
-  department:
-    "Restorative Dentist",
+    department:
+      "Ergonomic Recovery Therapist",
 
-  description:
-    "Expert in cavity fillings, damaged teeth restoration and long-lasting dental treatments."
-},
+    description:
+      "Expert in repetitive strain injuries, workplace postural correction, and lifestyle physical rehab."
+  },
 
 ];
 
@@ -288,7 +288,7 @@ return (
             },
           }}
         >
-          OUR DOCTORS
+          OUR SPECIALISTS
         </Typography>
 
         <Typography
@@ -303,7 +303,7 @@ return (
             color: "#111",
           }}
         >
-          Meet Our Specialists
+          Meet Our Experts
         </Typography>
 
         <Typography
@@ -322,12 +322,12 @@ return (
             lineHeight: {
               xs: "24px",
               md: "30px",
-            },
+          },
           }}
         >
-          Our experienced dental specialists provide advanced
-          treatments with modern technology and comfortable
-          patient care.
+          Our experienced physiotherapy specialists provide advanced
+          rehabilitation treatments with modern technology and comfortable
+          patient movement care.
         </Typography>
       </Box>
 

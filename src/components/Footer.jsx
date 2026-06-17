@@ -31,17 +31,17 @@ function Footer() {
           xs: 5,
           md: 4,
         },
-       
+        
         display: "flex",
         flexDirection: {
           xs: "column",
           md: "row",
         },
-        justifyContent:"center",
+        justifyContent: "center",
         alignItems: "center",
         gap: {
           xs: 4,
-          md:40,
+          md: 20, // Adjusted layout gap to avoid component overflow
         },
         overflow: "hidden",
         position: "relative",
@@ -67,15 +67,16 @@ function Footer() {
         sx={{
           width: {
             xs: "100%",
-            md: "220px",
+            md: "250px",
           },
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          ml:{xs:0,md:15}
+          ml: { xs: 0, md: 25 }
         }}
       >
+        {/* Single Logo Component (Animations Completely Removed) */}
         <Box
           sx={{
             width: {
@@ -90,83 +91,33 @@ function Footer() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-
-            "@keyframes rotateLogo": {
-              from: {
-                transform: "rotate(0deg)",
-              },
-              to: {
-                transform: "rotate(360deg)",
-              },
-            },
-
-            "@keyframes reverseRotate": {
-              from: {
-                transform: "rotate(360deg)",
-              },
-              to: {
-                transform: "rotate(0deg)",
-              },
-            },
-
-            "@keyframes float": {
-              "0%": {
-                transform: "translateY(0px)",
-              },
-              "50%": {
-                transform: "translateY(-8px)",
-              },
-              "100%": {
-                transform: "translateY(0px)",
-              },
-            },
-
-            animation:
-              "float 4s ease-in-out infinite",
           }}
         >
           <Box
             component="img"
-            src="logo1.png"
-            alt="logo1"
+            src="360_F_269645659_AoyvKF9SAh7OLxbdNOfoo1dzS3byqWZr-removebg-preview.png"
+            alt="Physio Clinic Logo"
             sx={{
               width: "100%",
               height: "100%",
-              position: "absolute",
-              opacity: 0.5,
-              animation:
-                "rotateLogo 12s linear infinite",
-            }}
-          />
-
-          <Box
-            component="img"
-            src="logo2.png"
-            alt="logo2"
-            sx={{
-              width: "100%",
-              height: "100%",
-              position: "absolute",
-              animation:
-                "reverseRotate 15s linear infinite",
-                
+              objectFit: "contain",
             }}
           />
         </Box>
 
         <Typography
           sx={{
-            mt: 2,
+           
             fontSize: {
               xs: "22px",
-              md: "26px",
+              md: "24px",
             },
             fontWeight: "bold",
             color: "#1E3A8A",
             textAlign: "center",
           }}
         >
-          Abi Dental Clinic
+         PHYSIO Clinic
         </Typography>
 
         <Typography
@@ -177,7 +128,7 @@ function Footer() {
             textAlign: "center",
           }}
         >
-          Healthy Smile Starts Here
+          Restore Mobility. Live Pain-Free.
         </Typography>
       </Box>
 
@@ -187,7 +138,7 @@ function Footer() {
           display: "flex",
           gap: {
             xs: 5,
-            md: 10,
+            md: 8,
           },
           flexWrap: "wrap",
 
@@ -197,12 +148,11 @@ function Footer() {
           },
 
           alignItems: "flex-start",
-
           width: "100%",
         }}
       >
         {/* Quick Links */}
-        <Box sx={{ minWidth: "180px" }}>
+        <Box sx={{ minWidth: "160px" }}>
           <Typography sx={headingStyle}>
             Quick Links
           </Typography>
@@ -214,70 +164,70 @@ function Footer() {
 
           <Typography sx={textStyle}>
             <InfoIcon sx={iconStyle} />
-            About
+            About Us
           </Typography>
 
           <Typography sx={textStyle}>
             <MedicalServicesIcon sx={iconStyle} />
-            Services
+            Treatments
           </Typography>
 
           <Typography sx={textStyle}>
             <GroupsIcon sx={iconStyle} />
-            Doctors
+            Our Therapists
           </Typography>
 
           <Typography sx={textStyle}>
             <EventAvailableIcon sx={iconStyle} />
-            Appointment
+            Book Session
           </Typography>
         </Box>
 
         {/* Services */}
-        <Box sx={{ minWidth: "180px" }}>
+        <Box sx={{ minWidth: "200px" }}>
           <Typography sx={headingStyle}>
-            Services
+            Our Expertise
           </Typography>
 
           <Typography sx={textStyle}>
-            Teeth Cleaning
+            Orthopedic Physiotherapy
           </Typography>
 
           <Typography sx={textStyle}>
-            Root Canal
+            Sports Injury Rehab
           </Typography>
 
           <Typography sx={textStyle}>
-            Dental Implant
+            Neurological Rehab
           </Typography>
 
           <Typography sx={textStyle}>
-            Smile Makeover
+            Post-Surgical Recovery
           </Typography>
 
           <Typography sx={textStyle}>
-            Teeth Whitening
+            Pediatric Physiotherapy
           </Typography>
 
           <Typography sx={textStyle}>
-            Braces
+            Chronic Pain Management
           </Typography>
         </Box>
 
         {/* Contact */}
         <Box sx={{ minWidth: "200px" }}>
           <Typography sx={headingStyle}>
-            Contact
+            Contact Us
           </Typography>
 
           <Typography sx={textStyle}>
             <ContactPhoneIcon sx={iconStyle} />
-            +91 9876543210
+            +91 98765 43210
           </Typography>
 
           <Typography sx={textStyle}>
             <EmailIcon sx={iconStyle} />
-            abi@gmail.com
+            abiphysio@gmail.com
           </Typography>
 
           <Typography sx={textStyle}>
@@ -287,12 +237,12 @@ function Footer() {
 
           <Typography sx={textStyle}>
             <AccessTimeIcon sx={iconStyle} />
-            Mon - Sat : 9AM - 8PM
+            Mon - Sat: 9AM - 8PM
           </Typography>
 
           <Typography sx={textStyle}>
             <AccessTimeIcon sx={iconStyle} />
-            Sunday : 10AM - 2PM
+            Sunday: 10AM - 2PM
           </Typography>
         </Box>
       </Box>
@@ -305,41 +255,27 @@ const headingStyle = {
     xs: "18px",
     md: "20px",
   },
-
   fontWeight: "bold",
-
   color: "#1E3A8A",
-
   mb: 1.5,
-
   textAlign: "left",
 };
 
 const textStyle = {
   display: "flex",
-
   alignItems: "center",
-
   gap: 1,
-
   color: "#334155",
-
   fontSize: {
     xs: "14px",
     md: "15px",
   },
-
   mb: 1,
-
   cursor: "pointer",
-
   justifyContent: "flex-start",
-
   transition: "0.3s",
-
   "&:hover": {
     color: "#2563EB",
-
     transform: "translateX(5px)",
   },
 };

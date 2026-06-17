@@ -41,11 +41,11 @@ function Contact() {
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(rgba(7,15,35,0.35),rgba(7,15,35,0.25))",
+            "linear-gradient(rgba(7,15,35,0.45),rgba(7,15,35,0.35))", // Contrast adjusted for clear reading
         }}
       />
 
-      {/* Glow */}
+      {/* Glow Effects */}
       <Box
         sx={{
           position: "absolute",
@@ -86,13 +86,13 @@ function Contact() {
           width: "100%",
 
           px: {
-            xs: 2,
+            xs: 2.5, // Slightly optimized touch spacing
             sm: 4,
             md: 6,
           },
         }}
       >
-        {/* Left */}
+        {/* Left Side: Contact Information */}
         <Grid item xs={12} md={5}>
           <Box>
             <Typography
@@ -101,7 +101,7 @@ function Contact() {
                 letterSpacing: "3px",
                 fontWeight: "bold",
                 mb: 2,
-                mt:3,
+                mt: 3,
 
                 fontSize: {
                   xs: "18px",
@@ -127,9 +127,9 @@ function Contact() {
                 },
               }}
             >
-              Let’s Build
+              Restore Mobility.
               <br />
-              Your Perfect Smile
+              Live Pain-Free.
             </Typography>
 
             <Typography
@@ -145,9 +145,8 @@ function Contact() {
                 },
               }}
             >
-              Our dental specialists are here to help
-              you with appointments, smile makeovers,
-              cleaning and advanced dental care.
+              Our experienced physiotherapy specialists are here to help you recover 
+              from injuries, manage chronic pain, and regain your active physical lifestyle.
             </Typography>
 
             <Box
@@ -180,8 +179,7 @@ function Contact() {
 
                   <Typography
                     sx={{
-                      color:
-                        "rgba(255,255,255,0.72)",
+                      color: "rgba(255,255,255,0.72)",
                     }}
                   >
                     +91 98765 43210
@@ -212,8 +210,7 @@ function Contact() {
 
                   <Typography
                     sx={{
-                      color:
-                        "rgba(255,255,255,0.72)",
+                      color: "rgba(255,255,255,0.72)",
                     }}
                   >
                     dentora@gmail.com
@@ -229,9 +226,7 @@ function Contact() {
                 }}
               >
                 <Box sx={iconBox}>
-                  <LocationOn
-                    sx={{ color: "#2563eb" }}
-                  />
+                  <LocationOn sx={{ color: "#2563eb" }} />
                 </Box>
 
                 <Box>
@@ -246,8 +241,7 @@ function Contact() {
 
                   <Typography
                     sx={{
-                      color:
-                        "rgba(255,255,255,0.72)",
+                      color: "rgba(255,255,255,0.72)",
                     }}
                   >
                     Madurai, Tamil Nadu
@@ -258,7 +252,7 @@ function Contact() {
           </Box>
         </Grid>
 
-        {/* Right */}
+        {/* Right Side: Form Handling Container */}
         <Grid item xs={12} md={5}>
           <Box
             sx={{
@@ -273,25 +267,18 @@ function Contact() {
               width: "100%",
 
               maxWidth: {
-                xs: "81%",
+                xs: "100%", // Mobile width scale fixed (repaired from 81% constraint clip)
                 md: "520px",
               },
 
-              background:
-                "rgba(9, 50, 251, 0.08)",
-
-              backdropFilter:
-                "blur(18px)",
-
-              border:
-                "1px solid rgba(255,255,255,0.15)",
-
-              boxShadow:
-                "0 20px 50px rgba(0,0,0,0.22)",
+              background: "rgba(9, 50, 251, 0.08)",
+              backdropFilter: "blur(18px)",
+              border: "1px solid rgba(255,255,255,0.15)",
+              boxShadow: "0 20px 50px rgba(0,0,0,0.22)",
 
               mt: {
                 xs: 0,
-                md: 6,
+                md: 9,
               },
             }}
           >
@@ -308,48 +295,56 @@ function Contact() {
                 },
               }}
             >
-              Send Message
+              Request Consultation
             </Typography>
 
             <Typography
               sx={{
-                color:
-                  "rgba(255,255,255,0.72)",
+                color: "rgba(255,255,255,0.72)",
                 mb: 4,
               }}
             >
-              Fill details and we will contact
-              you soon.
+              Share your details, and our care experts will reach out to schedule your assessment.
             </Typography>
 
             <Box
               component="form"
               action="https://formsubmit.co/abinayaabi45668@gmail.com"
               method="POST"
+             
             >
+              {/* Added native name tracking parameters to ensure backend form validation catches data fields */}
               <TextField
                 fullWidth
-                label="Name"
+                name="name"
+                label="Full Name"
+                required
                 sx={inputStyle}
               />
 
               <TextField
                 fullWidth
-                label="Phone"
+                name="phone"
+                label="Phone Number"
+                required
                 sx={inputStyle}
               />
 
               <TextField
                 fullWidth
-                label="Email"
+                name="email"
+                type="email"
+                label="Email Address"
+                required
                 sx={inputStyle}
               />
 
               <TextField
                 fullWidth
+                name="message"
                 multiline
                 rows={4}
-                label="Message"
+                label="Describe Your Condition / Pain Area"
                 sx={inputStyle}
               />
 
@@ -359,23 +354,16 @@ function Contact() {
                 sx={{
                   width: "100%",
                   py: 1.8,
-
                   borderRadius: "14px",
-
                   fontWeight: "bold",
-
                   color: "#fff",
-
-                  background:
-                    "linear-gradient(135deg,#2563eb,#60a5fa)",
-
+                  background: "linear-gradient(135deg,#2563eb,#60a5fa)",
                   "&:hover": {
-                    background:
-                      "linear-gradient(135deg,#1d4ed8,#3b82f6)",
+                    background: "linear-gradient(135deg,#1d4ed8,#3b82f6)",
                   },
                 }}
               >
-                Send Message
+                Book Consultation
               </Button>
             </Box>
           </Box>
@@ -388,45 +376,30 @@ function Contact() {
 const iconBox = {
   width: 50,
   height: 50,
-
   borderRadius: "14px",
-
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-
-  background:
-    "rgba(255,255,255,0.08)",
-
+  background: "rgba(255,255,255,0.08)",
   backdropFilter: "blur(10px)",
 };
 
 const inputStyle = {
   mb: 2,
-
   "& .MuiOutlinedInput-root": {
     color: "#fff",
-
     borderRadius: "14px",
-
-    background:
-      "rgba(255,255,255,0.08)",
-
+    background: "rgba(255,255,255,0.08)",
     "& fieldset": {
-      borderColor:
-        "rgba(255,255,255,0.15)",
+      borderColor: "rgba(255,255,255,0.15)",
     },
-
     "&:hover fieldset": {
-      borderColor:
-        "rgba(255,255,255,0.25)",
+      borderColor: "rgba(255,255,255,0.25)",
     },
-
     "&.Mui-focused fieldset": {
       borderColor: "#60a5fa",
     },
   },
-
   "& .MuiInputLabel-root": {
     color: "#dbeafe",
   },

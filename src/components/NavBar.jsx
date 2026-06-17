@@ -15,8 +15,6 @@ import {
 } from "@mui/material";
 
 import { NavLink } from "react-router-dom";
-
-import MedicalServicesIcon from "@mui/icons-material/MedicalServices";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const navItems = [
@@ -39,15 +37,14 @@ const NavBar = () => {
       sx={{
         width: 300,
         height: "100%",
-        background: "rgba(255,255,255,0.18)",
+        background: "rgba(255,255,255,0.95)",
         backdropFilter: "blur(20px)",
         WebkitBackdropFilter: "blur(20px)",
         borderLeft: "1px solid rgba(255,255,255,0.3)",
         p: 3,
       }}
     >
-      {/* Logo */}
-
+      {/* Mobile Drawer Logo Section */}
       <Box
         sx={{
           display: "flex",
@@ -58,20 +55,22 @@ const NavBar = () => {
       >
         <Box
           sx={{
-            width: 50,
-            height: 50,
-            borderRadius: "50%",
-            background: "rgba(219, 234, 254, 0.45)",
+            width: 55,
+            height: 55,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            boxShadow: "0 4px 20px rgba(33,150,243,0.3)",
+            filter: "drop-shadow(0px 0px 10px rgba(33, 150, 243, 0.5))",
           }}
         >
-          <MedicalServicesIcon
+          <Box
+            component="img"
+            src="360_F_269645659_AoyvKF9SAh7OLxbdNOfoo1dzS3byqWZr-removebg-preview.png"
+            alt="Physio Clinic Logo"
             sx={{
-              color: "#1565c0",
-              fontSize: 28,
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
             }}
           />
         </Box>
@@ -79,16 +78,17 @@ const NavBar = () => {
         <Typography
           variant="h6"
           sx={{
-            fontWeight: 700,
+            fontWeight: 800,
             color: "#1565c0",
+            letterSpacing: "1px",
+            fontFamily: "'Poppins', 'Roboto', sans-serif",
           }}
         >
-          Abi Dental Clinic
+          Physio Clinic
         </Typography>
       </Box>
 
       {/* Menu */}
-
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
@@ -97,10 +97,8 @@ const NavBar = () => {
               to={item.path}
               onClick={handleDrawerToggle}
               sx={{
-                borderRadius: "16px",
+                borderRadius: "12px",
                 mb: 1,
-                py: 1.3,
-
                 "&.active": {
                   background: "rgba(33,150,243,0.12)",
                   color: "#1565c0",
@@ -119,24 +117,17 @@ const NavBar = () => {
       </List>
 
       {/* Login */}
-
       <Button
         fullWidth
         variant="contained"
         sx={{
           mt: 4,
           borderRadius: "30px",
-          py: 1.3,
-          background:
-            "linear-gradient(135deg,#1e88e5,#42a5f5)",
+          py: 1,
+          background: "linear-gradient(135deg,#1e88e5,#42a5f5)",
           textTransform: "none",
           fontWeight: 600,
           boxShadow: "0 4px 20px rgba(33,150,243,0.4)",
-
-          "&:hover": {
-            background:
-              "linear-gradient(135deg,#1976d2,#2196f3)",
-          },
         }}
       >
         Login
@@ -150,94 +141,94 @@ const NavBar = () => {
         position="fixed"
         elevation={0}
         sx={{
-          backgroundColor: "rgba(174, 202, 254, 0.22)",
-
-          backdropFilter: "blur(18px)",
-
-          WebkitBackdropFilter: "blur(18px)",
-
-          borderBottom:
-            "1px solid rgba(255,255,255,0.35)",
-
-          boxShadow:
-            "0 8px 32px rgba(59,130,246,0.08)",
-
+          backgroundColor: "rgba(174, 202, 254, 0.18)",
+          backdropFilter: "blur(20px)",
+          WebkitBackdropFilter: "blur(20px)",
+          borderBottom: "1px solid rgba(255,255,255,0.4)",
+          boxShadow: "0 4px 30px rgba(59,130,246,0.04)",
           px: {
             xs: 1,
             sm: 2,
             md: 3,
           },
-
-          overflow: "hidden",
         }}
       >
         <Toolbar
           sx={{
             display: "flex",
             justifyContent: "space-between",
-            minHeight: "80px !important",
+            minHeight: "70px !important", // Reduced height for sleeker design
+            height: "70px",
           }}
         >
-          {/* Logo */}
-
+          {/* Main Logo Section */}
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
-              gap: 1,
+              gap: 1.5,
             }}
           >
+            {/* Logo Container slightly overflowing for a modern, sleek aesthetic */}
             <Box
               sx={{
                 width: {
-                  xs: 44,
-                  md: 52,
+                  xs: 55,
+                  sm: 60,
+                  md: 68,
                 },
                 height: {
-                  xs: 44,
-                  md: 52,
+                  xs: 55,
+                  sm: 60,
+                  md: 68,
                 },
-                borderRadius: "50%",
-                background:
-                  "rgba(219, 234, 254, 0.45)",
-
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-
-                boxShadow:
-                  "0 4px 20px rgba(33,150,243,0.4)",
+                filter: "drop-shadow(0px 0px 8px rgba(33, 150, 243, 0.45))",
+                transition: "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                mt: 0.5, // Subtle push to look centered with decreased height
+                
+                "&:hover": {
+                  transform: "scale(1.08) rotate(2deg)",
+                }
               }}
             >
-              <MedicalServicesIcon
+              <Box
+                component="img"
+                src="360_F_269645659_AoyvKF9SAh7OLxbdNOfoo1dzS3byqWZr-removebg-preview.png"
+                alt="Physio Clinic Logo"
                 sx={{
-                  color: "white",
-                  fontSize: {
-                    xs: 24,
-                    md: 30,
-                  },
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
                 }}
               />
             </Box>
 
+            {/* Premium Styled Typography */}
             <Typography
               variant="h6"
               sx={{
-                fontWeight: 700,
+                fontWeight: 800,
                 color: "#1565c0",
-                letterSpacing: 1,
+                textTransform: "uppercase", // Clean premium clinic style
+                letterSpacing: "1.5px", // Spaced letters for high-end look
+                fontFamily: "'Poppins', 'Montserrat', sans-serif",
                 fontSize: {
-                  xs: "1rem",
-                  md: "1.25rem",
+                  xs: "1.1rem",
+                  md: "1.35rem",
                 },
+                background: "linear-gradient(45deg, #0d47a1 30%, #1976d2 90%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent", // Creates subtle luxury text gradient
               }}
             >
-              Dental Clinic
+              Physio Clinic
             </Typography>
           </Box>
 
           {/* Desktop Menu */}
-
           <Box
             sx={{
               display: {
@@ -253,11 +244,11 @@ const NavBar = () => {
                 to={item.path}
                 style={({ isActive }) => ({
                   textDecoration: "none",
-                  color: isActive ? "#1565c0" : "#333",
-                  fontWeight: 600,
-                  fontSize: "18px",
-                  position: "relative",
-                  transition: "0.3s",
+                  color: isActive ? "#1565c0" : "#444",
+                  fontWeight: isActive ? 700 : 600,
+                  fontSize: "16px", // Adjusted slightly to sit nicely in 70px bar
+                  letterSpacing: "0.3px",
+                  transition: "0.2s ease",
                 })}
               >
                 {item.name}
@@ -266,7 +257,6 @@ const NavBar = () => {
           </Box>
 
           {/* Right Side */}
-
           <Box
             sx={{
               display: "flex",
@@ -275,7 +265,6 @@ const NavBar = () => {
             }}
           >
             {/* Desktop Login */}
-
             <Button
               variant="contained"
               sx={{
@@ -283,31 +272,23 @@ const NavBar = () => {
                   xs: "none",
                   md: "flex",
                 },
-
-                borderRadius: "30px",
-                px: 3,
-
-                background:
-                  "linear-gradient(135deg,#1e88e5,#42a5f5)",
-
+                borderRadius: "20px",
+                px: 3.5,
+                py: 0.8,
+                background: "linear-gradient(135deg,#1e88e5,#42a5f5)",
                 textTransform: "none",
-
                 fontWeight: 600,
-
-                boxShadow:
-                  "0 4px 20px rgba(33,150,243,0.4)",
-
+                boxShadow: "0 4px 14px rgba(33,150,243,0.3)",
                 "&:hover": {
-                  background:
-                    "linear-gradient(135deg,#1976d2,#2196f3)",
+                  background: "linear-gradient(135deg,#1976d2,#2196f3)",
+                  boxShadow: "0 6px 20px rgba(33,150,243,0.4)",
                 },
               }}
             >
               Login
             </Button>
 
-            {/* Mobile Menu */}
-
+            {/* Mobile Menu Icon */}
             <IconButton
               onClick={handleDrawerToggle}
               sx={{
@@ -315,18 +296,16 @@ const NavBar = () => {
                   xs: "flex",
                   md: "none",
                 },
-
                 color: "#1565c0",
               }}
             >
-              <MenuIcon fontSize="large" />
+              <MenuIcon fontSize="medium" />
             </IconButton>
           </Box>
         </Toolbar>
       </AppBar>
 
       {/* Mobile Drawer */}
-
       <Drawer
         anchor="right"
         open={mobileOpen}

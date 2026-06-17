@@ -12,560 +12,278 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import Doctor from "./Doctor";
 
 function Home() {
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
-<>
-    <Box
-      sx={{
-
-        width: "100%",
-        minHeight: "100vh",
-
-        backgroundImage:
-          "url('home.png')",
-
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-
-        position: "relative",
-        overflow: "hidden"
-
-      }}
-    >
-
-      {/* OVERLAY */}
-
+    <>
       <Box
         sx={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "rgba(255,255,255,0.12)"
+          width: "100%",
+          minHeight: { xs: "auto", md: "100vh" },
+          backgroundImage: "url('home6.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          position: "relative",
+          overflow: "hidden",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
         }}
-      />
-
-      {/* BLUE BLUR */}
-
-      <Box
-        sx={{
-         width: {
-  xs: "180px",
-  md: "320px",
-},
-
-height: {
-  xs: "180px",
-  md: "320px",
-},
-          borderRadius: "50%",
-          background: "#93c5fd",
-          filter: "blur(120px)",
-          position: "absolute",
-          top: "-120px",
-          left: "-100px",
-          opacity: 0.4
-        }}
-      />
-
-      {/* HERO SECTION */}
-
-      <Box
-  sx={{
-    position: "relative",
-    zIndex: 5,
-
-    width: "100%",
-    minHeight: "100vh",
-
-    display: "flex",
-
-    flexDirection: {
-      xs: "column-reverse",
-      md: "row",
-    },
-
-    justifyContent: "space-between",
-    alignItems: "center",
-
-    gap: {
-      xs: 4,
-      md: 5,
-    },
-
-    px: {
-      xs: 3,
-      sm: 4,
-      md: 8,
-      lg: 10,
-    },
-
-    pt: {
-      xs: 12,
-      md: 0,
-    },
-  }}
->
-
-        {/* LEFT SIDE */}
-
+      >
+        {/* OVERLAY */}
         <Box
-  sx={{
-    width: {
-      xs: "100%",
-      md: "48%",
-    },
+          sx={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(135deg, rgba(255,255,255,0.35) 0%, rgba(240,248,255,0.55) 100%)",
+            zIndex: 1
+          }}
+        />
 
-    textAlign: {
-      xs: "center",
-      md: "left",
-    },
-  }}
->
+        {/* AMBIENT GLOW */}
+        <Box
+          sx={{
+            width: { xs: "140px", sm: "220px", md: "350px" },
+            height: { xs: "140px", sm: "220px", md: "350px" },
+            borderRadius: "50%",
+            background: "#159273",
+            filter: "blur(90px)",
+            position: "absolute",
+            top: "-50px",
+            left: "-50px",
+            opacity: 0.25,
+            zIndex: 2
+          }}
+        />
 
-          {/* SMALL TEXT */}
-
-          <Typography
+        {/* HERO MAIN CONTAINER */}
+        <Box
+          sx={{
+            position: "relative",
+            zIndex: 3,
+            width: "100%",
+            maxWidth: "1440px",
+            minHeight: { xs: "auto", md: "100vh" },
+            display: "flex",
+            // Mobile-il Image Top, Text Bottom. Laptop-il side-by-side row-view.
+            flexDirection: { xs: "column", md: "row" },
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: { xs: 4, sm: 5, md: 3, lg: 5 },
+            px: { xs: 2.5, sm: 5, md: 6, lg: 10 },
+            pt: { xs: 12, sm: 14, md: 0 }, 
+            pb: { xs: 8, sm: 10, md: 4 }
+          }}
+        >
+          {/* [IMAGE TOP ON MOBILE] - VISUAL CARD */}
+          <Box
             sx={{
-
-              color: "#2563eb",
-
-              fontWeight: "bold",
-
-              letterSpacing: "2px",
-
-              pr:5,
-
-              fontSize: {
-  xs: "15px",
-  sm: "15px",
-  md: "18px",
-},
-
-              animation:
-                "fadeText 1s ease",
-
-              "@keyframes fadeText": {
-
-                from: {
-                  opacity: 0,
-                  transform:
-                    "translateY(40px)"
-                },
-
-                to: {
-                  opacity: 1,
-                  transform:
-                    "translateY(0px)"
-                }
-
-              }
-
+              width: { xs: "100%", md: "45%", lg: "45%" },
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              order: { xs: 1, md: 2 }, // Mobile-il ithu muthalil (Top) display aagum
+              mt: { xs: "10px", sm: "20px", md: 0 },
+              mb: { xs: 1, md: 0 }
             }}
           >
-            MODERN DENTAL CARE
-          </Typography>
-
-          {/* MAIN HEADING */}
-
-          <Typography
-            sx={{
-
-              mt: "20px",
-
-              pr:5,
-
-              fontSize: {
-  xs: "35px",
-  sm: "52px",
-  md: "78px",
-},
-
-lineHeight: {
-  xs: "50px",
-  sm: "60px",
-  md: "90px",
-},
-
-              fontWeight: "bold",
-
-              color: "#111",
-
-              animation:
-                "slideLeft 1.2s ease",
-
-              "@keyframes slideLeft": {
-
-                from: {
-                  opacity: 0,
-                  transform:
-                    "translateX(-80px)"
-                },
-
-                to: {
-                  opacity: 1,
-                  transform:
-                    "translateX(0px)"
+            <Box
+              sx={{
+                width: { xs: "100%", sm: "360px", md: "380px", lg: "450px" },
+                height: { xs: "240px", sm: "320px", md: "440px", lg: "520px" },
+                borderRadius: { xs: "14px", sm: "24px", md: "32px" },
+                overflow: "hidden",
+                position: "relative",
+                
+                background: "rgba(255, 255, 255, 0.3)",
+                backdropFilter: "blur(20px)",
+                WebkitBackdropFilter: "blur(20px)",
+                border: "2px solid rgba(255, 255, 255, 0.9)",
+                
+                boxShadow: `
+                  0 15px 35px rgba(0, 0, 0, 0.15),
+                  0 0 25px rgba(37, 99, 235, 0.1),
+                  inset 0 0 10px rgba(255, 255, 255, 0.2)
+                `,
+                transition: "all 0.4s ease",
+                "&:hover": {
+                  transform: { xs: "none", md: "translateY(-6px)" }
                 }
+              }}
+            >
+              <Box
+                component="img"
+                src="home7.jpg"
+                alt="physiotherapist"
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block"
+                }}
+              />
+            </Box>
+          </Box>
 
-              }
-
+          {/* [CONTENT BOTTOM ON MOBILE] - TEXT COLUMN */}
+          <Box
+            sx={{
+              width: { xs: "100%", md: "52%", lg: "50%" },
+              textAlign: { xs: "center", md: "left" },
+              display: "flex",
+              flexDirection: "column",
+              alignItems: { xs: "center", md: "flex-start" },
+              order: { xs: 2, md: 1 } // Mobile-il ithu irandavathaaga (Bottom) display aagum
             }}
           >
-            Healthy Smile
-          </Typography>
-
-          {/* SECOND LINE */}
-
-         <Box
-  sx={{
-    display: "flex",
-    alignItems: "center",
-
-    justifyContent: {
-      xs: "center",
-      md: "flex-start",
-    },
-
-    flexWrap: "wrap",
-  }}
->
-
+            {/* TAGLINE */}
             <Typography
               sx={{
-                pr:4,
-                
-
-                fontSize: {
-  xs: "35px",
-  sm: "52px",
-  md: "78px",
-},
-
-lineHeight: {
-  xs: "50px",
-  sm: "60px",
-  md: "90px",
-},
-
+                color: "#2563eb",
                 fontWeight: "bold",
-
-                background:
-                  "linear-gradient(to right,#2563eb,#60a5fa)",
-
-                WebkitBackgroundClip:
-                  "text",
-
-                WebkitTextFillColor:
-                  "transparent"
-
+                letterSpacing: "1px",
+                fontSize: { xs: "11px", sm: "13px", md: "15px", lg: "18px" },
+                animation: "fadeText 1s ease",
+                "@keyframes fadeText": {
+                  from: { opacity: 0, transform: "translateY(15px)" },
+                  to: { opacity: 1, transform: "translateY(0px)" }
+                }
               }}
             >
-              Starts Here
+              ADVANCED PHYSIOTHERAPY & REHAB
             </Typography>
 
-            {/* HEART IMAGE */}
-
-            <Box
-              component="img"
-
-              src="little heart.png"
-
-              alt="heart"
-
+            {/* MAIN TITLE */}
+            <Typography
               sx={{
-                pr:5,
+                mt: { xs: "8px", sm: "12px", md: "15px" },
+                fontSize: { xs: "28px", sm: "42px", md: "56px", lg: "72px" },
+                lineHeight: { xs: "36px", sm: "52px", md: "68px", lg: "84px" },
+                fontWeight: "bold",
+                color: "#111",
+                animation: "slideLeft 1.2s ease",
+                "@keyframes slideLeft": {
+                  from: { opacity: 0, transform: "translateX(-30px)" },
+                  to: { opacity: 1, transform: "translateX(0px)" }
+                }
+              }}
+            >
+              Your Recovery
+            </Typography>
 
-               width: {
-  xs: "100px",
-  sm: "90px",
-  md: "150px",
-},
+            {/* GRADIENT TITLE WITH HEART */}
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: { xs: "center", md: "flex-start" },
+                flexWrap: "wrap",
+                gap: { xs: 0.8, sm: 1.5 }
+              }}
+            >
+              <Typography
+                sx={{
+                  fontSize: { xs: "28px", sm: "42px", md: "56px", lg: "72px" },
+                  lineHeight: { xs: "36px", sm: "52px", md: "68px", lg: "84px" },
+                  fontWeight: "bold",
+                  background: "linear-gradient(to right, #2563eb, #60a5fa)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent"
+                }}
+              >
+               Our Commitment
+              </Typography>
 
-                mt: "10px",
+              
+            </Box>
 
-                animation:
-                  "floatHeart 3s ease-in-out infinite",
+            {/* SUB DESCRIPTION */}
+            <Typography
+              sx={{
+                mt: "12px",
+                color: "#444",
+                fontSize: { xs: "13.5px", sm: "15px", md: "16px", lg: "19px" },
+                lineHeight: { xs: "20px", sm: "24px", md: "28px", lg: "34px" },
+                width: { xs: "100%", sm: "85%", md: "95%" },
+                animation: "fadePara 1.5s ease",
+                "@keyframes fadePara": {
+                  from: { opacity: 0 },
+                  to: { opacity: 1 }
+                }
+              }}
+            >
+              Experience advanced clinical movement rehabilitation with expert 
+              physiotherapists and targeted treatment procedures for a pain-free, 
+              healthier, and completely active lifestyle.
+            </Typography>
 
-                "@keyframes floatHeart": {
-
-                  "0%": {
-                    transform:
-                      "translateY(0px)"
-                  },
-
-                  "50%": {
-                    transform:
-                      "translateY(-8px)"
-                  },
-
-                  "100%": {
-                    transform:
-                      "translateY(0px)"
+            {/* ACTION BUTTONS */}
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", sm: "row" },
+                gap: { xs: "10px", sm: "16px" },
+                mt: { xs: "20px", sm: "30px", md: "35px" },
+                width: { xs: "100%", sm: "auto" },
+                justifyContent: { xs: "center", md: "flex-start" }
+              }}
+            >
+              <Button
+                sx={{
+                  width: { xs: "100%", sm: "210px" },
+                  background: "linear-gradient(to right,#2563eb,#3b82f6)",
+                  color: "white",
+                  px: "30px",
+                  py: "12px",
+                  borderRadius: "40px",
+                  textTransform: "none",
+                  fontSize: "14px",
+                  fontWeight: "bold",
+                  transition: "0.4s",
+                  boxShadow: "0 10px 25px rgba(37,99,235,0.25)",
+                  "&:hover": {
+                    transform: "translateY(-3px)",
+                    boxShadow: "0 14px 30px rgba(37,99,235,0.45)",
+                    background: "linear-gradient(to right,#1d4ed8,#2563eb)"
                   }
+                }}
+                onClick={() => navigate("/Appointment")}
+              >
+                Book Appointment
+              </Button>
 
-                }
-
-              }}
-            />
-
+              <Button
+                sx={{
+                  width: { xs: "100%", sm: "170px" },
+                  background: "rgba(255,255,255,0.9)",
+                  color: "#2563eb",
+                  px: "30px",
+                  py: "12px",
+                  borderRadius: "40px",
+                  textTransform: "none",
+                  fontSize: "14px",
+                  fontWeight: "bold",
+                  backdropFilter: "blur(10px)",
+                  border: "1px solid rgba(37,99,235,0.2)",
+                  transition: "0.4s",
+                  "&:hover": {
+                    background: "white",
+                    transform: "translateY(-3px)",
+                    boxShadow: "0 10px 20px rgba(0,0,0,0.06)"
+                  }
+                }}
+              >
+                Learn More
+              </Button>
+            </Box>
           </Box>
-
-          {/* DESCRIPTION */}
-
-          <Typography
-            sx={{
-
-              mt: "20px",
-
-              color: "#555",
-
-              fontSize: {
-  xs: "15px",
-  sm: "17px",
-  md: "20px",
-},
-
-lineHeight: {
-  xs: "28px",
-  md: "36px",
-},
-
-width: {
-  xs: "85%",
-  md: "90%",
-},
-
-              animation:
-                "fadePara 1.5s ease",
-
-              "@keyframes fadePara": {
-
-                from: {
-                  opacity: 0
-                },
-
-                to: {
-                  opacity: 1
-                }
-
-              }
-
-            }}
-          >
-            Experience advanced dental care
-            with expert doctors and modern
-            treatments for a brighter,
-            healthier and more confident smile.
-          </Typography>
-
-          {/* BUTTONS */}
-
-          <Box
-  sx={{
-    display: "flex",
-
-    flexDirection: {
-      xs: "column",
-      sm: "row",
-    },
-
-    gap: "20px",
-
-    mt: "40px",
-
-  mb:5,
-    ml:2,
-
-    justifyContent: {
-      xs: "center",
-      md: "flex-start",
-    },
-  }}
->
-
-            {/* BUTTON 1 */}
-
-            <Button
-              sx={{
-                width: {
-  xs: "230px",
-  sm: "auto",
-},
-                background:
-                  "linear-gradient(to right,#2563eb,#3b82f6)",
-
-                color: "white",
-
-                px: "35px",
-
-                py: "15px",
-
-                borderRadius: "40px",
-
-                textTransform: "none",
-
-                fontSize: "14px",
-
-                fontWeight: "bold",
-
-                transition: "0.4s",
-
-                boxShadow:
-                  "0 10px 25px rgba(37,99,235,0.3)",
-
-                "&:hover": {
-
-                  transform:
-                    "translateY(-4px)",
-
-                  boxShadow:
-                    "0 14px 30px rgba(37,99,235,0.5)",
-
-                  background:
-                    "linear-gradient(to right,#1d4ed8,#2563eb)"
-                }
-
-              }}
-
-               onClick={() => navigate("/Appointment")}
-            >
-              Book Appointment
-            </Button>
-
-            {/* BUTTON 2 */}
-
-            <Button
-              sx={{
-                width: {
-  xs: "230px",
-  sm: "auto",
-},
-
-                background:
-                  "rgba(255,255,255,0.7)",
-
-                color: "#2563eb",
-
-                px: "35px",
-
-                py: "15px",
-
-                borderRadius: "40px",
-
-                textTransform: "none",
-
-                fontSize: "16px",
-
-                fontWeight: "bold",
-
-                backdropFilter:
-                  "blur(10px)",
-
-                border:
-                  "1px solid rgba(255,255,255,0.5)",
-
-                transition: "0.4s",
-
-                "&:hover": {
-
-                  background:
-                    "white",
-
-                  transform:
-                    "translateY(-4px)"
-                }
-
-              }}
-
-            >
-              Learn More
-            </Button>
-
-          </Box>
-
         </Box>
-
-        {/* RIGHT SIDE */}
-
-        <Box
-  sx={{
-    width: {
-      xs: "100%",
-      md: "42%",
-    },
-
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  }}
->
-
-          {/* IMAGE CARD */}
-
-          <Box
-  sx={{
-    width: {
-      xs: "100%",
-      sm: "320px",
-      md: "450px",
-    },
-
-    height: {
-      xs: "300px",
-      sm: "420px",
-      md: "540px",
-    },
-
-    borderRadius: {
-      xs: "25px",
-      md: "35px",
-    },
-
-    mr: 6,
-
-    overflow: "hidden",
-
-    background: "rgba(255,255,255,0.18)",
-
-    backdropFilter: "blur(15px)",
-
-    border: "1px solid rgba(255,255,255,0.3)",
-
-    boxShadow:
-      "0 8px 30px hsla(244, 84%, 20%, 0.12)",
-  }}
->
-
-            {/* IMAGE */}
-
-            <Box
-              component="img"
-
-              src="check.jpg"
-
-              alt="doctor"
-
-              sx={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover"
-              }}
-            />
-
-          </Box>
-
-        </Box>
-
       </Box>
 
-    </Box>
-
-    <Services preview={true}/>
-    <WhyChooseUs/>
-    <Doctor preview={true}/>
-
+      <Services home />
+      <WhyChooseUs />
+      <Doctor preview={true} />
     </>
   );
 }

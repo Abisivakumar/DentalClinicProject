@@ -38,7 +38,9 @@ function Appointment() {
     "Dr. James Wilson",
   ];
 
-  const services = ["Teeth Cleaning", "Root Canal", "Braces", "Dental Checkup"];
+  const services = ["Orthopedic Physiotherapy", "Sports Injury Rehabilitation", "Neurological Physiotherapy", 
+    "Post-Surgical Rehabilitation","Pain Management Therapy","Pediatric Physiotherapy","Geriatric Physiotherapy"
+  ];
 
   const times = ["09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "02:00 PM", "04:00 PM"];
 

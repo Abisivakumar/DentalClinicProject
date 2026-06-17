@@ -16,22 +16,24 @@ function AboutUs() {
 
   const navigate = useNavigate();
 
+  // Content updated to Physiotherapy themes
   const features = [
-    "Advanced Dental Technology",
-    "Experienced Dental Specialists",
-    "Comfortable Patient Care",
-    "Emergency Dental Services",
+    "Advanced Rehabilitation Technology",
+    "Experienced Physiotherapy Specialists",
+    "Compassionate Patient Recovery Care",
+    "Emergency Musculoskeletal Support",
   ];
 
+  // Content updated to Physiotherapy themes
   const stats = [
     {
       number: "10+",
-      title: "Expert Doctors",
+      title: "Expert Therapists",
     },
 
     {
       number: "5000+",
-      title: "Happy Patients",
+      title: "Recovered Patients",
     },
 
     {
@@ -41,7 +43,7 @@ function AboutUs() {
 
     {
       number: "Modern",
-      title: "Dental Equipment",
+      title: "Rehab Equipment",
     },
   ];
 
@@ -248,13 +250,13 @@ function AboutUs() {
               xs: "25px",
               sm: "42px",
               md: "55px",
-            },
-          }}
-        >
-          Creating Beautiful
-          <br />
-          & Healthy Smiles
-        </Typography>
+                },
+              }}
+            >
+              Restoring Mobility
+              <br />
+              & Healthy Living
+            </Typography>
 
       </Box>
 
@@ -277,7 +279,7 @@ function AboutUs() {
 
           <Box
             sx={{
-                 width: {xs:"93%",md:"100%"},
+              width: {xs:"93%",md:"100%"},
 
               maxWidth: "630px",
 
@@ -308,14 +310,14 @@ function AboutUs() {
             }}
           >
 
-            {/* IMAGE */}
+            {/* IMAGE SOURCE PATH REMAINS SAME FOR ASSET INTEGRITY */}
 
             <Box
               component="img"
 
               src="group Doctors.jpg"
 
-              alt="Dental Team"
+              alt="Physiotherapy Team"
 
               sx={{
 
@@ -406,9 +408,8 @@ function AboutUs() {
                   },
                 }}
               >
-                ABI
-                <br />
-                DENTAL
+               
+                PHYSIO
                 <br />
                 CLINIC
               </Typography>
@@ -427,10 +428,10 @@ function AboutUs() {
             sx={{
               animation:
                 "fadeRight 1.2s ease",
-                mr:{xs:3,md:5},
-                ml:{xs:3,md:5},
+              mr:{xs:3,md:5},
+              ml:{xs:3,md:5},
 
-                maxWidth:600
+              maxWidth:600
             }}
           >
 
@@ -452,18 +453,17 @@ function AboutUs() {
                 mb: 4,
               }}
             >
-              At Dentora Dental Clinic, we provide modern
-              dental care with advanced technology and
+              At Abi Physiotherapy Clinic, we provide modern
+              rehabilitation care with advanced technology and
               experienced specialists. Our mission is to
-              create healthy, confident smiles in a safe
+              restore pain-free movement, active strength in a safe
               and comfortable environment.
 
               <br /><br />
 
-              We specialize in cosmetic dentistry,
-              smile makeovers, orthodontics, dental
-              implants and emergency dental care
-              treatments with personalized attention
+              We specialize in orthopedic rehab,
+              sports therapy, post-surgical recovery, joint treatments 
+              and neurological rehabilitation sessions with personalized attention
               for every patient.
             </Typography>
 
@@ -624,7 +624,7 @@ function AboutUs() {
             },
           }}
         >
-          Trusted Dental Excellence
+          Trusted Clinical Excellence
         </Typography>
 
         <Typography
@@ -647,13 +647,12 @@ function AboutUs() {
             },
           }}
         >
-          Our clinic combines advanced dental technology,
-          compassionate patient care and highly experienced
-          dental specialists to deliver exceptional treatment
+          Our clinic combines advanced treatment systems,
+          compassionate physical therapy and highly experienced
+          medical specialists to deliver exceptional rehabilitation
           experiences for patients of all ages. We focus on
-          providing safe, comfortable and personalized care
-          with modern treatment solutions for beautiful and
-          healthy smiles.
+          providing safe, customized physical training and modern pain management
+          solutions for long-term health and dynamic performance recovery.
         </Typography>
 
       </Box>

@@ -1,19 +1,19 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-/* ICONS */
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import MedicalServicesIcon from "@mui/icons-material/MedicalServices";
-import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
-import EventAvailableIcon from "@mui/icons-material/EventAvailable";
-import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
-import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
+/* ICONS UPDATED TO PHYSIOTHERAPY REHABILITATION THEMES */
+import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew"; // For Mobility Recovery
+import LocalHospitalIcon from "@mui/icons-material/LocalHospital"; // For Certified Expert Care
+import PhysicalTherapyIcon from "@mui/icons-material/FitnessCenter"; // For Advanced Rehab Gear
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth"; // For Quick Scheduling
+import SentimentSatisfiedIcon from "@mui/icons-material/SentimentSatisfied"; // For Pain Relief Success
+import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety"; // For Patient Centered Safety
 
 function WhyChooseUs() {
   const features = [
     {
       icon: (
-        <FavoriteIcon
+        <AccessibilityNewIcon
           sx={{
             fontSize: {
               xs: "34px",
@@ -23,15 +23,15 @@ function WhyChooseUs() {
           }}
         />
       ),
-      title: "Friendly Care",
+      title: "Mobility Recovery",
       description:
-        "Comfortable and caring dental treatment for a stress-free experience.",
+        "Customized exercise programs targeting deep tissue recovery and active physical joint movement.",
       glow: "#ff6ba6",
     },
 
     {
       icon: (
-        <MedicalServicesIcon
+        <LocalHospitalIcon
           sx={{
             fontSize: {
               xs: "34px",
@@ -41,15 +41,15 @@ function WhyChooseUs() {
           }}
         />
       ),
-      title: "Expert Doctors",
+      title: "Expert Therapists",
       description:
-        "Experienced dental specialists using modern techniques and equipment.",
+        "Highly certified medical rehabilitation specialists using advanced evidence-based techniques.",
       glow: "#3b82f6",
     },
 
     {
       icon: (
-        <AutoAwesomeIcon
+        <PhysicalTherapyIcon
           sx={{
             fontSize: {
               xs: "34px",
@@ -59,15 +59,15 @@ function WhyChooseUs() {
           }}
         />
       ),
-      title: "Bright Smile",
+      title: "Advanced Rehab",
       description:
-        "Advanced treatments for a healthier and brighter smile.",
+        "Equipped with modern therapeutic modalities for targeted musculoskeletal pain management.",
       glow: "#f59e0b",
     },
 
     {
       icon: (
-        <EventAvailableIcon
+        <CalendarMonthIcon
           sx={{
             fontSize: {
               xs: "34px",
@@ -79,13 +79,13 @@ function WhyChooseUs() {
       ),
       title: "Easy Booking",
       description:
-        "Quick appointment booking with flexible scheduling options.",
+        "Quick clinical appointment booking with flexible custom slot scheduling options.",
       glow: "#8b5cf6",
     },
 
     {
       icon: (
-        <SentimentSatisfiedAltIcon
+        <SentimentSatisfiedIcon
           sx={{
             fontSize: {
               xs: "34px",
@@ -95,15 +95,15 @@ function WhyChooseUs() {
           }}
         />
       ),
-      title: "Happy Patients",
+      title: "Pain Free Life",
       description:
-        "Trusted by many patients for quality treatment and friendly support.",
+        "Trusted by thousands of recovering patients for long-term health relief and structural support.",
       glow: "#14b8a6",
     },
 
     {
       icon: (
-        <EmojiEmotionsIcon
+        <HealthAndSafetyIcon
           sx={{
             fontSize: {
               xs: "34px",
@@ -113,9 +113,9 @@ function WhyChooseUs() {
           }}
         />
       ),
-      title: "Comfort Care",
+      title: "Comfort & Safety",
       description:
-        "Gentle treatment ensuring maximum comfort during every visit.",
+        "Gentle, well-monitored therapy training ensuring maximum comfort during every session.",
       glow: "#2563eb",
     },
   ];
@@ -309,7 +309,7 @@ function WhyChooseUs() {
               color: "#111",
             }}
           >
-            We Care About Your Smile
+            We Care About Your Mobility
           </Typography>
         </Box>
 
